@@ -1,4 +1,4 @@
-# AI_thembeddings_L
+# AI_thembeddings
 
 A theoretical research project focused on embeddings and information theory applied to deep learning.
 
