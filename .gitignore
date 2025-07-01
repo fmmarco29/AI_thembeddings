@@ -1,0 +1,15 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.pdf
+
+# Python artifacts
+__pycache__/
+*.pyc
+.env
+.env/
+
+# Jupyter
+.ipynb_checkpoints/
