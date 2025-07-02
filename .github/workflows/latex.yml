@@ -1,28 +1,19 @@
-name: Build LaTeX Document
+name: LaTeX build
 
 on:
   push:
-    branches:
-      - main
-      - master
+    branches: [main]
   pull_request:
+    branches: [main]
 
 jobs:
-  build-latex:
+  build_latex:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Setup TeX Live
-        uses: dante-ev/latex-action@v2
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
-          compiler: pdflatex
-
-      - name: Upload PDF artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: compiled-pdf
-          path: main.pdf
